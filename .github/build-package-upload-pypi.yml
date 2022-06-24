@@ -1,0 +1,29 @@
+name: Publish KeyPhraseTransformer to PyPI and TestPyPI
+
+on:
+  # This workflows will upload a Python Package on PyPI when a release is created
+  release:
+    types: [created]
+    branches:
+      - main
+
+jobs:
+  build-n-publish:
+    name: Build and publish Publish KeyPhraseTransformer to PyPI and TestPyPI
+    runs-on: ubuntu-18.04
+
+    steps:
+      - uses: actions/checkout@main
+      - name: Set up Python 3.7
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.7
+
+      - name: Build a binary wheel and a source tarball
+        run: >-
+          python setup.py sdist
+      - name: Publish a Python distribution to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          user: __token__
+          password: ${{ secrets.PYPI_UPLOAD }}

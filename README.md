@@ -1,7 +1,17 @@
-![](_assets/logo1.png)
-**KeyPhraseTransformer** lets you quickly extract key-phrases, topics or popular themes from your text of any length with Transformers.
+<img align="center" src="_assets/logo1.png" alt="simpleT5">
 
-KeyPhraseTransformer is built on mT5 Transformer architecture, trained on 500,000 training samples on 8 TPU cores. It is further fine-tuned on 50,000 data samples on general english corpus
+<p align="center">
+<b>Quickly extract key-phrases/topics from you text data with T5 transformer
+</b>
+
+
+**KeyPhraseTransformer** is built on T5 Transformer architecture, trained on 500,000 training samples to extract important phrases/topics/themes from text of any length.
+
+### Why KeyPhraseTransformer?
+ - It needs no preprocessing of your data. Just dump you data to KeyPhraseTransformer
+ - No need to choose unigrams, bigrams or trigrams to extract. It has been trained to extract phrases of any length.
+ - It processes text of any length (It breaks you text data into chunks internally)
+
 
 ```python
 from keyphrasetransformer import KeyPhraseTransformer

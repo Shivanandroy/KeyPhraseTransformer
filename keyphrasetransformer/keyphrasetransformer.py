@@ -6,6 +6,8 @@ from nltk.corpus import words
 from nltk.tokenize import word_tokenize, sent_tokenize
 from transformers import AutoTokenizer, T5ForConditionalGeneration
 
+nltk.download('punkt')
+nltk.download("words")
 
 class KeyPhraseTransformer:
     def __init__(self, model_name: str = "snrspeaks/KeyPhraseTransformer"):
