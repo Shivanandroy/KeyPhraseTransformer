@@ -12,6 +12,12 @@
  - No need to choose one word, two word or 3 word length phrases to extract. It has been trained to extract phrases which are important, regardless of number of words.
  - It processes text of any length (It breaks you text data into chunks internally)
 
+### Installation:
+```python
+pip install keyphrasetransformer
+```
+### Use:
+[![Generic badge](https://img.shields.io/badge/🤗-Open%20In%20Spaces-blue.svg)](https://huggingface.co/spaces/snrspeaks/KeyPhraseTransformer)
 
 ```python
 from keyphrasetransformer import KeyPhraseTransformer
