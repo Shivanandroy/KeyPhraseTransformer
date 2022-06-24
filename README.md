@@ -9,7 +9,7 @@
 
 ### Why KeyPhraseTransformer?
  - It needs no preprocessing of your data. Just dump you data to KeyPhraseTransformer
- - No need to choose unigrams, bigrams or trigrams to extract. It has been trained to extract phrases of any length.
+ - No need to choose one word, two word or 3 word length phrases to extract. It has been trained to extract phrases which are important, regardless of number of words.
  - It processes text of any length (It breaks you text data into chunks internally)
 
 

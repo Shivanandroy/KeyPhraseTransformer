@@ -7,44 +7,34 @@ with open(path.join(here, "README.md"), encoding="utf-8") as f:
     long_description = f.read()
 
 setuptools.setup(
-    name="simplet5",
-    version="0.1.4",
+    name="keyphrasetransformer",
+    version="0.0.1",
     license="apache-2.0",
     author="Shivanand Roy",
-    author_email="shivanandroy.official@gmail.com",
-    description="simpleT5 is built on top of PyTorch-lightning ⚡️ and Transformers 🤗 that lets you quickly train your T5 models.",
+    author_email="snrcodes@gmail.com",
+    description="Quickly extract key-phrases/topics from you text data with T5 transformer.",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/Shivanandroy/simpleT5",
+    url="https://github.com/Shivanandroy/KeyPhraseTransformer",
     project_urls={
-        "Repo": "https://github.com/Shivanandroy/simpleT5",
-        "Bug Tracker": "https://github.com/Shivanandroy/simpleT5/issues",
+        "Repo": "https://github.com/Shivanandroy/KeyPhraseTransformer",
+        "Bug Tracker": "https://github.com/Shivanandroy/KeyPhraseTransformer/issues",
     },
     keywords=[
+        "keyword extraction",
+        "keyphrase extraction",
+        "keyphrase",
+        "extraction"
         "T5",
         "simpleT5",
-        "transformers",
-        "NLP",
-        "finetune",
-        "fine-tuning",
-        "pytorch",
-        "summarization",
-        "translation",
-        "training",
-        "classification",
-        "Q&A",
-        "inference",
-        "fast inference",
+        "transformers", 
+        "NLP"
     ],
     packages=setuptools.find_packages(),
     python_requires=">=3.5",
     install_requires=[
-        "numpy",
-        "pandas",
-        "sentencepiece",
-        "torch>=1.7.0,!=1.8.0",  # excludes torch v1.8.0
-        "transformers==4.16.2",
-        "pytorch-lightning==1.5.10",
+        "nltk",
+        "transformers"
     ],
     classifiers=[
         "Intended Audience :: Developers",
