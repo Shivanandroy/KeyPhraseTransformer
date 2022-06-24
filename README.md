@@ -8,9 +8,12 @@
 **KeyPhraseTransformer** is built on T5 Transformer architecture, trained on 500,000 training samples to extract important phrases/topics/themes from text of any length.
 
 ### Why KeyPhraseTransformer?
- - It needs no preprocessing of your data. Just dump you data to KeyPhraseTransformer
- - No need to choose one word, two word or 3 word length phrases to extract. It has been trained to extract phrases which are important, regardless of number of words.
- - It processes text of any length (It breaks you text data into chunks internally)
+- You get the power of amazing T5 architecture. 
+- The underlying T5 model is specifically trained in extracting important phrases from the text corpus, so the results are of superior quality.
+- No pre-processing is needed of any kind. Just dump your data to the model
+- It does not need any n-gram-related inputs from user. It can automatically extract unigram, bigram, or trigram on its own.
+- It can process text data of any length as it breaks down input text into smaller chunks internally
+- It helps to automate the topic modeling/keyword extraction process end to end with no manual intervention.
 
 ### Installation:
 ```python
