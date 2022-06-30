@@ -4,16 +4,20 @@ import sys
 import nltk
 from nltk.corpus import words
 from nltk.tokenize import word_tokenize, sent_tokenize
-from transformers import AutoTokenizer, T5ForConditionalGeneration
+from transformers import AutoTokenizer, T5ForConditionalGeneration, MT5ForConditionalGeneration
 
 nltk.download('punkt')
 nltk.download("words")
 
 class KeyPhraseTransformer:
-    def __init__(self, model_name: str = "snrspeaks/KeyPhraseTransformer"):
+    def __init__(self, model_type: str = "t5", model_name: str = "snrspeaks/KeyPhraseTransformer"):
         self.model_name = model_name
-        self.model = T5ForConditionalGeneration.from_pretrained(self.model_name)
-        self.tokenizer = AutoTokenizer.from_pretrained(self.model_name)
+        if model_type == "t5":
+            self.model = T5ForConditionalGeneration.from_pretrained(self.model_name)
+            self.tokenizer = AutoTokenizer.from_pretrained(self.model_name)
+        if model_type == "mt5":
+            self.model = MT5ForConditionalGeneration.from_pretrained(self.model_name)
+            self.tokenizer = AutoTokenizer.from_pretrained(self.model_name)        
 
     def split_into_paragraphs(self, doc: str, max_tokens_per_para: int = 128):
         sentences = sent_tokenize(doc.strip())
